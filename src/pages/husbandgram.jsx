@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createHusbandGram } from '../utils/api';
+import { createHusbandGram, speakWithElevenLabs } from '../utils/api';
 
 
   export default function HusbandGramForm() {
@@ -14,6 +14,7 @@ import { createHusbandGram } from '../utils/api';
       setLoading(true);
       const generated = await createHusbandGram({ genre, question, spicy });
       setOutput(generated);
+      speakWithElevenLabs(generated); // 🔊 this triggers ElevenLabs to speak
       setLoading(false);
     };
   
