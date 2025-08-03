@@ -37,7 +37,7 @@ import { createHusbandGram } from '../utils/api';
               checked={spicy}
               onChange={(e) => setSpicy(e.target.checked)}
             />
-            <span>Make it spicy? 🌶️</span>
+            <span>Make it spicy hm? 🌶️</span>
           </label>
           <button
             type="submit"
